@@ -36,7 +36,7 @@
 <body>
 	<!-- Header -->
 	<div id="header"></div>
-	
+
     <!-- Page Content -->
     <div class="content-section-b">
         <div class="container">
@@ -47,42 +47,27 @@
                     <div class="clearfix"></div>
                     <br>
 					<form>
-					<div class="group">
-						<input type="text" required>
-						<span class="highlight"></span>
-						<span class="bar"></span>
-						<label>Name</label>
+					<div class="form-group">
+						<label for="email">Full Name</label>
+						<input class="form-control" id="name" name="name" type="text">
+					</div>
+
+					<div class="form-group">
+						<label for="email">Email</label>
+						<input class="form-control" id="Email" name="Email" type="text">
+					</div>
+
+					<div class="form-group">
+						<label for="email">Mobile No</label>
+						<input class="form-control" id="MobileNo" name="MobileNo" type="text">
+					</div>
+
+					<div class="form-group">
+						<label for="email">Message</label>
+						<input class="form-control" id="Message" name="Message" type="text">
 					</div>
 
 					<div class="group">
-						<input type="text" required>
-						<span class="highlight"></span>
-						<span class="bar"></span>
-						<label>Email</label>
-					</div>
-
-					<div class="group">
-						<input type="text" required>
-						<span class="highlight"></span>
-						<span class="bar"></span>
-						<label>Mobile No</label>
-					</div>
-
-					<div class="group">
-						<input type="text" required>
-						<span class="highlight"></span>
-						<span class="bar"></span>
-						<label>Message</label>
-					</div>
-					
-					<div class="group">
-						<input type="text" required>
-						<span class="highlight"></span>
-						<span class="bar"></span>
-						<label>Message</label>
-					</div>
-
-					<div class="group">						
 						<a href="#" class="btn btn-default btn-lg"><i class="glyphicon glyphicon-send"></i> <span class="network-name">Send</span></a>
 					</div>
 					</form>
@@ -93,20 +78,20 @@
     </div>
 
     <!-- Footer -->
-    <div id="footer"></div>	
+    <div id="footer"></div>
 
     <!-- jQuery -->
     <script src="../../js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../../js/bootstrap.min.js"></script>
-	
+
 	<script>
 		$(document).ready(function(){
 			//alert("peeyush:"+$(document).path);
 			$("#header").load("../common/header-driver.html");
-			$("#footer").load("../common/footer.html");			
-		});	
+			$("#footer").load("../common/footer.html");
+		});
 	</script>
 
 </body>

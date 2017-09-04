@@ -36,7 +36,7 @@
 <body>
 	<!-- Header -->
 	<div id="header"></div>
-	
+
     <!-- Page Content -->
     <div class="content-section-b">
         <div class="container">
@@ -50,45 +50,128 @@
 			</div>
 			<div class="row">
 				<div class="col-lg-8">
-					<form>		
-						<div class="form-group">
-							<label for="email">Select Vehicle</label>
-							<select class = "form-control">
-								<option>Select</option>
-								<option selected>MH02 AD 34567</option>
-								<option>KL03 DE 43233</option>								
-								<option>PB45 TY 99876</option>
-							</select>
-							<p class="note">This is your registered vehicle with us.</p>					
+					<form>
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="form-group">
+									<label for="email">Select Vehicle</label>
+									<select class = "form-control">
+										<option>Select</option>
+										<option selected>MH02 AD 34567</option>
+										<option>KL03 DE 43233</option>
+										<option>PB45 TY 99876</option>
+									</select>
+									<p class="note">This is your registered vehicle with us.</p>
+								</div>
+
+								<div class="form-group">
+									<label for="email">Date/Time</label>
+									<input class="form-control" id="user_login" name="user[login]" type="text"/>
+									<p class="note">This will be the date and time of your journey.</p>
+								</div>
+							</div>
+
+							<div class="col-lg-6">
+								<div class="form-group">
+									<label for="email">Pick-Up Point</label>
+									<input class="form-control" id="user_login" name="user[login]" type="text"/>
+									<p class="note">This will be the source of your journey.</p>
+								</div>
+
+								<div class="form-group">
+									<label for="email">Drop Point</label>
+									<input class="form-control" id="user_login" name="user[login]" type="text"/>
+									<p class="note">This will be the destination of your journey.</p>
+								</div>
+							</div>
 						</div>
-						
-						<div class="form-group">
-							<label for="email">Source</label>
-							<input class="form-control" id="user_login" name="user[login]" type="text">
-							<p class="note">This will be the source of your journey — you can enter your using Google Maps.</p>					
+
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="form-group">
+									<input id="flexidays" type="checkbox"/>
+									<label for="flexidays">&nbsp;&nbsp;Flexible with the above date & Time?</label>
+									<p class="note">Post will be dispalyed for +/- 3 days searches, gives you more visibility.</p>
+								</div>
+							</div>
+
+							<div class="col-lg-6">
+								<div class="form-group">
+									<input id="flexipdadd" type="checkbox"/>
+									<label for="flexipdadd">&nbsp;&nbsp;Flexible with the above pick-up/Drop Point?</label>
+									<p class="note">Flexible pick-up/drop address post are likely to hit more searches.</p>
+								</div>
+							</div>
+						</div>
+						<hr>
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="form-group">
+									<label for="email">Original Ride Cost (£)</label>
+									<input class="form-control" id="orgridecost" name="orgridecost" type="text"/>
+									<p class="note">This is the total cost of the original ride.</p>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="form-group">
+									<label for="email">Empty-Ride Cost (£)</label>
+									<input class="form-control" id="emptyridecost" name="emptyridecost" type="text" readonly="readonly"/>
+									<p class="note">This is proposed cost of your ride, which is 10% less than the original ride.</p>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="form-group">
+									<input id="flexidays" type="checkbox"/>
+									<label for="flexidays">&nbsp;&nbsp;Open for further negotiation on the final cost of your ride?</label>
+									<p class="note">Posts with negotiable cost are likely to appear on more searches.</p>
+								</div>
+							</div>
 						</div>
 					</form>
                 </div>
-            </div>
+
+				<div class="col-lg-4">
+					<h4>Have tons of labels?</h4>
+					<p>Rendering problems can arise when you have dozens of inline labels within a narrow container, each containing its own <code>inline-block</code> element (like an icon). The way around this is setting <code>display: inline-block;</code>. For context and an example, <a href="https://github.com/twbs/bootstrap/issues/13219">see #13219</a>.</p>
+				</div>
+		</div>
+		</br>
+		<div class="row">
+			<div class="col-lg-8">
+				<div class="group">
+					<a href="#" class="btn btn-default btn-lg"><i class="fa fa-plus fa-fw"></i><span class="network-name">Post Ride</span></a>
+				</div>
+			</div>
+        </div>
         </div>
         <!-- /.container -->
     </div>
 
     <!-- Footer -->
-    <div id="footer"></div>	
+    <div id="footer"></div>
 
     <!-- jQuery -->
     <script src="../../js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../../js/bootstrap.min.js"></script>
-	
+
 	<script>
 		$(document).ready(function(){
 			//alert("peeyush:"+$(document).path);
 			$("#header").load("../common/header-driver.html");
-			$("#footer").load("../common/footer.html");			
-		});	
+			$("#footer").load("../common/footer.html");
+		});
+
+		$("#orgridecost").keyup(function() {
+			//alert("peeyush");
+			var value=$('#orgridecost').val();
+			//alert(value);
+			$("#emptyridecost").val(value-(value*10/100));
+		});
+
 	</script>
 
 </body>

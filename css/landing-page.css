@@ -35,7 +35,7 @@ h6 {
     padding-bottom: 50px;
     text-align: center;
     color: #f8f8f8;
-    background: url(../img/intro-bg.jpg) no-repeat center center;
+    background: url(../img/main.jpg) no-repeat center center;
     background-size: cover;
 }
 
@@ -199,6 +199,11 @@ p.copyright {
 .btn-rss.disabled,.btn-rss[disabled],fieldset[disabled] .btn-rss,.btn-rss.disabled:hover,.btn-rss[disabled]:hover,fieldset[disabled] .btn-rss:hover,.btn-rss.disabled:focus,.btn-rss[disabled]:focus,fieldset[disabled] .btn-rss:focus,.btn-rss.disabled:active,.btn-rss[disabled]:active,fieldset[disabled] .btn-rss:active,.btn-rss.disabled.active,.btn-rss[disabled].active,fieldset[disabled] .btn-rss.active{background-color:#587ea3;border-color:rgba(0,0,0,0.2)}
 
 /*Social media end*/
+
+/*Logo*/
+.sitelogo > .icon { text-align: center; position: relative; }
+.sitelogo > .icon > .image { position: relative; z-index: 2; margin: auto; width: 50px; height: 50px; border: 3px solid white; line-height: 50px; border-radius: 50%; background: #333; vertical-align: middle; }
+.sitelogo > .icon > .image > i { font-size: 25px !important; color: #fff !important; }
 
 /*box with icon hover*/
 .box > .icon { text-align: center; position: relative; }

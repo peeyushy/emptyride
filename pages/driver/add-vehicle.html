@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Empty Ride - Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../../css/landing-page.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script>
+
+	</script>
+
+</head>
+
+<body>
+	<!-- Header -->
+	<div id="header"></div>
+
+    <!-- Page Content -->
+    <div class="content-section-b">
+        <div class="container">
+            <div class="row">
+				<div class="col-lg-12">
+                    <h2 class="section-heading">Add Vehicle</h2>
+					<hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <br>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-8">
+					<form>
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="form-group">
+								<label for="email">Registration Number (Number Plate)</label>
+								<input class="form-control" id="user_login" name="user[login]" type="text"/>
+								<p class="note">This is your vehicle's registration no. For e.g. TY12 YYX</p>
+							</div>
+						</div>
+					</div>
+
+					
+					<table class="table table-hover" id="tablediv">
+					<thead>
+					  <tr>
+						<th><p>Is this the vehicle you are looking for?</p></th>
+					  </tr>
+					</thead>
+					<tbody>
+					  <tr>
+						<td>Make</td>
+						<td>BMW</td>
+					  </tr>
+					  <tr>
+						<td>Color</td>
+						<td>Black</td>
+					  </tr>
+					  <tr>
+						<td>Registration Number</td>
+						<td>XX12 UOL</td>
+					  </tr>						  
+					</tbody>
+					</table>
+					
+					
+					<div class="row" id="radiodiv">
+						<div class="col-lg-6">
+							<div class="form-group">
+								<div class="radio radio-inline">
+									<input type="radio" id="inlineRadio1" value="yes" name="radioInline" checked="">
+									<label for="inlineRadio1"> Yes </label>
+								</div>
+								<div class="radio radio-inline">
+									<input type="radio" id="inlineRadio2" value="no" name="radioInline">
+									<label for="inlineRadio2"> No </label>
+								</div>									
+							</div>
+						</div>
+					</div>
+					
+					<div class="row" id="buttondiv">
+						<div class="col-lg-8">
+							<div class="group">
+								<a href="#" class="btn btn-default btn-lg"><span class="network-name">Continue</span></a>
+							</div>
+						</div>
+					</div>
+					</form>
+				</div>
+				<div class="col-lg-4">
+					<div class="list-group">
+						<div class="d-flex w-100 justify-content-between">
+							<h4>Have questions on your previous posts?</h4>
+							<p>Please check the status of your post.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+        <!-- /.container -->
+    </div>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- jQuery -->
+    <script src="../../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../../js/bootstrap.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			//alert("peeyush:"+$(document).path);
+			$("#header").load("../common/header-driver.html");
+			$("#footer").load("../common/footer.html");
+			$("#tablediv").hide();
+			$("#radiodiv").hide();
+			
+			$("#buttondiv a").click(function() {
+				//alert("peeyush");
+				$("#tablediv").show();
+				$("#radiodiv").show();
+				
+				var selected = $("#radiodiv input[type='radio']:checked");
+				if (selected.length > 0) {
+					selectedVal = selected.val();
+					//alert("selectedVal::"+selectedVal)
+					if(selectedVal=='no'){
+						$("#tablediv").hide();
+						$("#radiodiv").hide();
+					}
+				}
+			});
+		});		
+
+	</script>
+
+</body>
+
+</html>

@@ -66,21 +66,42 @@
 					<thead>
 					  <tr>
 						<th><p>Is this the vehicle you are looking for?</p></th>
+						<th></th>
 					  </tr>
 					</thead>
 					<tbody>
-					  <tr>
-						<td>Make</td>
-						<td>BMW</td>
-					  </tr>
-					  <tr>
-						<td>Color</td>
-						<td>Black</td>
-					  </tr>
-					  <tr>
-						<td>Registration Number</td>
-						<td>XX12 UOL</td>
-					  </tr>						  
+						<tr>
+							<td>Registration Number</td>
+							<td>XXY12 UOL</td>
+						</tr>						  	
+						<tr>
+							<td>Vehicle Make</td>
+							<td>BMW</td>
+						</tr>
+						<tr>
+							<td>Color</td>
+							<td>Black</td>
+						</tr>					  
+						<tr>
+							<td>Date Of First Registration</td>
+							<td>June 2015</td>
+						</tr>
+						<tr>
+							<td>Year Of Manufacture</td>
+							<td>2015</td>
+						</tr>
+						<tr>
+							<td>Cylinder Capacity (cc)</td>
+							<td>1500</td>
+						</tr>
+						<tr>
+							<td>Fuel Type</td>
+							<td>DIESEL</td>
+						</tr>
+						<tr>
+							<td>Tax Status</td>
+							<td>Tax Not Due</td>
+						</tr>
 					</tbody>
 					</table>
 					
@@ -100,6 +121,71 @@
 						</div>
 					</div>
 					
+					<div id="vehicle-registration-div">
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="form-group">
+									<label for="email">Vehicle Type</label>
+									<select class = "form-control">
+										<option>Select</option>
+										<option selected>Goods Carier</option>
+										<option>People Carier</option>
+										<option>Animal Carier</option>
+										<option>Other</option>
+									</select>
+									<p class="note">Define what your vehicle can be used as.</p>
+								</div>
+							</div>
+							
+							<div class="col-lg-6">
+								<div class="form-group">
+									<label for="email">Vehicle SubType</label>
+									<select class = "form-control">
+										<option>Select</option>
+										<option selected>Van Multipurpose</option>
+										<option>Construction material</option>
+										<option>Liquid Only</option>
+										<option>Other</option>
+									</select>
+									<p class="note">Define sub category for your vehicle this will help us in getting you the best ride for this vehicle.</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="form-group">
+									<label for="email">Vehicle Dimensions (H/W/L)</label>
+									<input class="form-control" id="orgridecost" name="orgridecost" type="text"/>
+									<p class="note">This is available space in the vehicle. <a href="#"> Size Guide</a></p>
+								</div>
+							</div>
+							
+							<div class="col-lg-6">
+								<div class="form-group">
+									<label for="email">Vehicle Capacity/Payload</label>
+									<input class="form-control" id="orgridecost" name="orgridecost" type="text"/>
+									<p class="note">This is the maximum payload vehicle can take. i.e 9 People or 1800Kg.</p>
+								</div>
+							</div>
+						</div>
+						
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="form-group">
+									<label for="email">Vehicle Operational Cost (£)</label>
+									<input class="form-control" id="orgridecost" name="orgridecost" type="text"/>
+									<p class="note">This is the total operational cost of your vehicle per month.<a href="#"> Calculate</a></p>
+								</div>
+							</div>							
+							<div class="col-lg-6">
+								<div class="form-group">
+									<label for="email">Select Vehicle Photo</label>
+									<input type="file" />									
+								</div>
+							</div>							
+						</div>
+					</div>
 					<div class="row" id="buttondiv">
 						<div class="col-lg-8">
 							<div class="group">

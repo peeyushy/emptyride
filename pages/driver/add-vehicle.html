@@ -110,11 +110,11 @@
 						<div class="col-lg-6">
 							<div class="form-group">
 								<div class="radio radio-inline">
-									<input type="radio" id="inlineRadio1" value="yes" name="radioInline" checked="">
+									<input type="radio" id="inlineRadio1" value="yes" name="radioInline"/>
 									<label for="inlineRadio1"> Yes </label>
 								</div>
 								<div class="radio radio-inline">
-									<input type="radio" id="inlineRadio2" value="no" name="radioInline">
+									<input type="radio" id="inlineRadio2" value="no" name="radioInline"/>
 									<label for="inlineRadio2"> No </label>
 								</div>									
 							</div>
@@ -131,6 +131,7 @@
 										<option selected>Goods Carier</option>
 										<option>People Carier</option>
 										<option>Animal Carier</option>
+										<option>Equipment Carier</option>
 										<option>Other</option>
 									</select>
 									<p class="note">Define what your vehicle can be used as.</p>
@@ -143,8 +144,9 @@
 									<select class = "form-control">
 										<option>Select</option>
 										<option selected>Van Multipurpose</option>
-										<option>Construction material</option>
+										<option>Construction Material</option>
 										<option>Liquid Only</option>
+										<option>Equipment</option>
 										<option>Other</option>
 									</select>
 									<p class="note">Define sub category for your vehicle this will help us in getting you the best ride for this vehicle.</p>
@@ -186,10 +188,17 @@
 							</div>							
 						</div>
 					</div>
-					<div class="row" id="buttondiv">
+					<div class="row" id="continuebuttondiv">
 						<div class="col-lg-8">
 							<div class="group">
-								<a href="#" class="btn btn-default btn-lg"><span class="network-name">Continue</span></a>
+								<a class="btn btn-default btn-lg"><span class="network-name">Continue</span></a>
+							</div>
+						</div>
+					</div>
+					<div class="row" id="savebuttondiv">
+						<div class="col-lg-8">
+							<div class="group">
+								<a href="./register-vehicle.html" class="btn btn-default btn-lg"><span class="network-name">Save</span></a>
 							</div>
 						</div>
 					</div>
@@ -224,9 +233,11 @@
 			$("#footer").load("../common/footer.html");
 			$("#tablediv").hide();
 			$("#radiodiv").hide();
+			$("#vehicle-registration-div").hide();
+			$("#savebuttondiv").hide();			
 			
-			$("#buttondiv a").click(function() {
-				//alert("peeyush");
+			$("#continuebuttondiv a").click(function() {
+				//alert("on click..");
 				$("#tablediv").show();
 				$("#radiodiv").show();
 				
@@ -237,6 +248,18 @@
 					if(selectedVal=='no'){
 						$("#tablediv").hide();
 						$("#radiodiv").hide();
+						$("#vehicle-registration-div").hide();
+						$(':radio').removeAttr('checked');
+					}else if(selectedVal=='yes'){
+						$("#tablediv").show();
+						$("#radiodiv").hide();
+						$("#vehicle-registration-div").show();
+						$("#continuebuttondiv").hide();
+						$("#savebuttondiv").show();
+					}else{
+						$("#tablediv").hide();
+						$("#radiodiv").show();
+						$("#vehicle-registration-div").hide();
 					}
 				}
 			});

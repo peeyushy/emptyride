@@ -599,14 +599,22 @@ span.round-tab:hover {
 }
 /* radio buttons end */
 
-.profile-user-img {
-	margin: 0 auto;
-	width: 200px;
-	padding: 3px;
-	border: 3px solid #333
+.feature {
+  box-shadow: 3px 3px 4px -3px #ececec;
+  margin-bottom: 30px;
+  padding:10px 15px;
 }
-
-.profile-username {
-	font-size: 21px;
-	margin-top: 5px
+.feature-icon i {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+.feature h5 {
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.feature p {
+  color: #111;
+  font-size: 14px;
+  line-height: 20px;
 }

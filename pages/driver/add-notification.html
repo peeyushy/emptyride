@@ -42,7 +42,7 @@
         <div class="container">
             <div class="row">
 				<div class="col-lg-12">
-                    <h2 class="section-heading">Post Empty-Ride</h2>
+                    <h2 class="section-heading">Add Notification</h2>
 					<hr class="section-heading-spacer">
                     <div class="clearfix"></div>
                     <br>
@@ -70,6 +70,22 @@
 						<div class="row">
 							<div class="col-lg-6">
 								<div class="form-group">
+									<label for="email">From Date</label>
+									<input class="form-control" id="user_login" name="user[login]" type="text"/>
+									<p class="note">This will be the date and time of your journey.</p>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="form-group">
+									<label for="email">To Date</label>
+									<input class="form-control" id="user_login" name="user[login]" type="text"/>
+									<p class="note">This will be the date and time of your journey.</p>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="form-group">
 									<label for="email">Select Vehicle</label>
 									<select class = "form-control">
 										<option>Select</option>
@@ -80,71 +96,22 @@
 									<p class="note">This is your registered vehicle with us.</p>
 								</div>
 							</div>
-							<div class="col-lg-6">
-								<div class="form-group">
-									<label for="email">Date/Time</label>
-									<input class="form-control" id="user_login" name="user[login]" type="text"/>
-									<p class="note">This will be the date and time of your journey.</p>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-lg-6">
-								<div class="form-group">
-									<input id="flexipdadd" type="checkbox"/>
-									<label for="flexipdadd">&nbsp;&nbsp;Flexible with the above Pick-up/Drop Point?</label>
-									<p class="note">Flexible Pick-up/Drop point post are likely to hit more searches.</p>
-								</div>
-							</div>
-							<div class="col-lg-6">
-								<div class="form-group">
-									<input id="flexidays" type="checkbox"/>
-									<label for="flexidays">&nbsp;&nbsp;Flexible with the above date & Time?</label>
-									<p class="note">Post will be dispalyed for +/- 3 days searches, gives you more visibility.</p>
-								</div>
-							</div>
-						</div>
-						<hr>
-						<div class="row">
-							<div class="col-lg-6">
-								<div class="form-group">
-									<label for="email">Original Ride Cost (£)</label>
-									<input class="form-control" id="orgridecost" name="orgridecost" type="text"/>
-									<p class="note">This is the total cost of the original ride.</p>
-								</div>
-							</div>
-							<div class="col-lg-6">
-								<div class="form-group">
-									<label for="email">Empty-Ride Cost (£)</label>
-									<input class="form-control" id="emptyridecost" name="emptyridecost" type="text" readonly="readonly"/>
-									<p class="note">This is the proposed cost of your ride, which is less than the original ride considering multiple factors. <a href="#">Know More</a></p>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-lg-12">
-								<div class="form-group">
-									<input id="flexidays" type="checkbox"/>
-									<label for="flexidays">&nbsp;&nbsp;Open for further negotiation on the final cost of your ride?</label>
-									<p class="note">Posts with negotiable cost are likely to appear more on searches.</p>
-								</div>
-							</div>
-						</div>
+						</div>	
 					</form>
                 </div>
 				<div class="col-lg-4">
 					<div class="list-group">
 						<div class="d-flex w-100 justify-content-between">
-							<h4>Have questions on your previous posts?</h4>
+							<h4>Adding notifications will keep you updated</h4>
 							<p>Please check the status of your post. waining its own <code>inline-block</code> element (like an icon). The way around this is setting <code>display: inline-block;</code>. For context and an example, <a href="https://github.com/twbs/bootstrap/issues/13219">see #13219</a>.</p>
 						</div>
 					</div>
 				</div>
-			</div>		
+			</div>
 			<div class="row">
 				<div class="col-lg-8">
 					<div class="group">
-						<a href="./view-ride.html" class="btn btn-default btn-lg"><span class="network-name">Save</span></a>
+						<a href="./notifications.html" class="btn btn-default btn-lg"><span class="network-name">Save</span></a>
 					</div>
 				</div>
 			</div>

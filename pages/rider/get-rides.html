@@ -16,7 +16,8 @@
 
     <!-- Custom CSS -->
     <link href="../../css/landing-page.css" rel="stylesheet">
-
+    <link href="../../css/bootstrap-datepicker.css" rel="stylesheet">
+	
     <!-- Custom Fonts -->
     <link href="../../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
@@ -130,11 +131,11 @@
 						<div class="media">
 							<div class="media-body">
 								<h5><strong>Pick-Up Point</strong></h5>
-								<input class="form-control" id="user_login" name="user[login]" type="text"/>
+									<input type="text" name="from_address" class="form-control" id="autocomplete_from" onFocus="geolocate()" placeholder="From Location"/>
 								<h5><strong>Drop Point</strong></h5>
-								<input class="form-control" id="user_login" name="user[login]" type="text"/>
+									<input type="text" name="to_address" class="form-control" id="autocomplete_to" onFocus="geolocate()" placeholder="To Location"/>
 								<h5><strong>Date</strong></h5>
-								<input class="form-control" id="user_login" name="user[login]" type="text"/>
+									<input type="text" class="form-control" id="datepicker"/>
 								<h5><strong>Ride Category</strong></h5>
 								<select class = "form-control">
 									<option>Select</option>
@@ -172,18 +173,26 @@
 
     <!-- jQuery -->
     <script src="../../js/jquery.js"></script>
-
+	<script src="../../js/emptyride.js"></script>
+	<script src="../../js/bootstrap-datepicker.js"></script>
+	
     <!-- Bootstrap Core JavaScript -->
     <script src="../../js/bootstrap.min.js"></script>
-
+	
 	<script>
 		$(document).ready(function(){
 			$("#header").load("../common/header-rider.html");
 			$("#footer").load("../common/footer.html");
 		});
-
+		$( function() {			
+			$("#datepicker").datepicker({ 
+				autoclose: true, 
+				todayHighlight: true
+			}).datepicker('update', new Date());
+		} );
 	</script>
-
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6oFN8m53QEJHVAqyihDc5nRzYxktzUQI&libraries=places&callback=initAutocomplete"
+        async defer></script>
 </body>
 
 </html>

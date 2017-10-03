@@ -16,6 +16,7 @@
 
     <!-- Custom CSS -->
     <link href="../../css/landing-page.css" rel="stylesheet">
+	<link href="../../css/bootstrap-datepicker.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="../../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -54,15 +55,15 @@
 						<div class="row">
 							<div class="col-lg-6">
 								<div class="form-group">
-									<label for="email">Pick-Up Point</label>
-									<input class="form-control" id="user_login" name="user[login]" type="text"/>
+									<label for="email">Pick-Up Point</label>									
+									<input type="text" name="from_address" class="form-control" id="autocomplete_from" onFocus="geolocate()" placeholder="From Location"/>
 									<p class="note">This will be the source of your journey.</p>
 								</div>
 							</div>
 							<div class="col-lg-6">
 								<div class="form-group">
 									<label for="email">Drop Point</label>
-									<input class="form-control" id="user_login" name="user[login]" type="text"/>
+									<input type="text" name="to_address" class="form-control" id="autocomplete_to" onFocus="geolocate()" placeholder="To Location"/>
 									<p class="note">This will be the destination of your journey.</p>
 								</div>
 							</div>
@@ -83,7 +84,7 @@
 							<div class="col-lg-6">
 								<div class="form-group">
 									<label for="email">Date/Time</label>
-									<input class="form-control" id="user_login" name="user[login]" type="text"/>
+									<input type="text" class="form-control" id="datepicker"/>
 									<p class="note">This will be the date and time of your journey.</p>
 								</div>
 							</div>
@@ -157,7 +158,8 @@
 
     <!-- jQuery -->
     <script src="../../js/jquery.js"></script>
-
+	<script src="../../js/emptyride.js"></script>
+	<script src="../../js/bootstrap-datepicker.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="../../js/bootstrap.min.js"></script>
 
@@ -174,9 +176,17 @@
 			//alert(value);
 			$("#emptyridecost").val(value-(value*10/100));
 		});
+		
+		$( function() {			
+			$("#datepicker").datepicker({ 
+				autoclose: true, 
+				todayHighlight: true
+			}).datepicker('update', new Date());
+		} );
 
 	</script>
-
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6oFN8m53QEJHVAqyihDc5nRzYxktzUQI&libraries=places&callback=initAutocomplete"
+        async defer></script>
 </body>
 
 </html>

@@ -61,11 +61,11 @@
 						</div>
 					</div>
 
-					
+
 					<table class="table table-hover" id="tablediv">
 					<thead>
 					  <tr>
-						<th><p>Is this the vehicle you are looking for?</p></th>
+						<th></th>
 						<th></th>
 					  </tr>
 					</thead>
@@ -73,7 +73,7 @@
 						<tr>
 							<td>Registration Number</td>
 							<td>YP64 DFE</td>
-						</tr>						  	
+						</tr>
 						<tr>
 							<td>Vehicle Make</td>
 							<td>MERCEDES-BENZ</td>
@@ -81,7 +81,7 @@
 						<tr>
 							<td>Color</td>
 							<td>Black</td>
-						</tr>					  
+						</tr>
 						<tr>
 							<td>Date Of First Registration</td>
 							<td>June 2015</td>
@@ -103,12 +103,13 @@
 							<td>Tax Not Due</td>
 						</tr>
 					</tbody>
-					</table>
-					
+					</table>										
 					
 					<div class="row" id="radiodiv">
 						<div class="col-lg-6">
 							<div class="form-group">
+								<label for="email">Is this the vehicle you are looking ?</label>
+								<div class="form-group">								
 								<div class="radio radio-inline">
 									<input type="radio" id="inlineRadio1" value="yes" name="radioInline"/>
 									<label for="inlineRadio1"> Yes </label>
@@ -116,11 +117,12 @@
 								<div class="radio radio-inline">
 									<input type="radio" id="inlineRadio2" value="no" name="radioInline"/>
 									<label for="inlineRadio2"> No </label>
-								</div>									
+								</div>
+								</div>
 							</div>
 						</div>
 					</div>
-					
+
 					<div id="vehicle-registration-div">
 						<div class="row">
 							<div class="col-lg-6">
@@ -137,10 +139,10 @@
 									<p class="note">Define what your vehicle can be used as.</p>
 								</div>
 							</div>
-							
+
 							<div class="col-lg-6">
 								<div class="form-group">
-									<label for="email">Vehicle SubType</label>									
+									<label for="email">Vehicle SubType</label>
 									<select class="selectpicker form-control" multiple data-actions-box="true">
 										<option>Van Multipurpose</option>
 										<option>Construction Material</option>
@@ -152,7 +154,7 @@
 								</div>
 							</div>
 						</div>
-						
+
 						<div class="row">
 							<div class="col-lg-6">
 								<div class="form-group">
@@ -161,7 +163,7 @@
 									<p class="note">This is available space in the vehicle. <a href="#"> Size Guide</a></p>
 								</div>
 							</div>
-							
+
 							<div class="col-lg-6">
 								<div class="form-group">
 									<label for="email">Vehicle Capacity/Payload</label>
@@ -170,7 +172,7 @@
 								</div>
 							</div>
 						</div>
-						
+
 						<div class="row">
 							<div class="col-lg-6">
 								<div class="form-group">
@@ -178,18 +180,19 @@
 									<input class="form-control" id="orgridecost" name="orgridecost" type="text"/>
 									<p class="note">This is the total operational cost of your vehicle per month.<a href="#"> Calculate</a></p>
 								</div>
-							</div>							
+							</div>
 							<div class="col-lg-6">
 								<div class="form-group">
 									<label for="email">Select Vehicle Photo</label>
-									<input type="file" />									
+									<input type="file" />
 								</div>
-							</div>							
+							</div>
 						</div>
 					</div>
 					<div class="row" id="continuebuttondiv">
 						<div class="col-lg-8">
 							<div class="group">
+								<a href="./register-vehicle.html" class="btn btn-default btn-lg"><span class="network-name">&larr; Back</span></a>&nbsp;
 								<a class="btn btn-default btn-lg"><span class="network-name">Continue</span></a>
 							</div>
 						</div>
@@ -197,6 +200,7 @@
 					<div class="row" id="savebuttondiv">
 						<div class="col-lg-8">
 							<div class="group">
+								<a href="./register-vehicle.html" class="btn btn-default btn-lg"><span class="network-name">&larr; Back</span></a>&nbsp;
 								<a href="./register-vehicle.html" class="btn btn-default btn-lg"><span class="network-name">Save</span></a>
 							</div>
 						</div>
@@ -233,13 +237,13 @@
 			$("#tablediv").hide();
 			$("#radiodiv").hide();
 			$("#vehicle-registration-div").hide();
-			$("#savebuttondiv").hide();			
-			
+			$("#savebuttondiv").hide();
+
 			$("#continuebuttondiv a").click(function() {
 				//alert("on click..");
 				$("#tablediv").show();
 				$("#radiodiv").show();
-				
+
 				var selected = $("#radiodiv input[type='radio']:checked");
 				if (selected.length > 0) {
 					selectedVal = selected.val();
@@ -262,7 +266,7 @@
 					}
 				}
 			});
-		});		
+		});
 
 	</script>
 

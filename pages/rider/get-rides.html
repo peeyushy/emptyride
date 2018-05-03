@@ -17,7 +17,7 @@
     <!-- Custom CSS -->
     <link href="../../css/landing-page.css" rel="stylesheet">
     <link href="../../css/bootstrap-datepicker.css" rel="stylesheet">
-	
+
     <!-- Custom Fonts -->
     <link href="../../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
@@ -51,11 +51,11 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-lg-8">					
-					
-						
+				<div class="col-lg-8">
+
+
 				</div>
-                
+
 
 				<div class="col-lg-4 col-md-4">
 				<div class="panel panel-default">
@@ -68,28 +68,23 @@
 									<input type="text" name="to_address" class="form-control" id="autocomplete_to" onFocus="geolocate()" placeholder="To Location"/>
 								<h5><strong>Date</strong></h5>
 									<input type="text" class="form-control" id="datepicker"/>
-								<h5><strong>Ride Category</strong></h5>
+								<h5><strong>Good For</strong></h5>
 								<select class = "form-control">
-									<option>Select</option>
-									<option selected>Goods Carier</option>
-									<option>People Carier</option>
-									<option>Animal Carier</option>
-									<option>Equipment Carier</option>
+									<option selected>Select</option>
+									<option>Small Boxes,Furniture,Housemoves</option>
+									<option>Construction Material Only</option>
+									<option>Liquids Only</option>
+									<option>Equipments Only</option>
+									<option>Pets Only</option>
+									<option>Cars</option>
+									<option>Motorcycles</option>
+									<option>Other Vehicles</option>
 									<option>Other</option>
 								</select>
-								<h5><strong>Ride Sub-Category</strong></h5>								
+								<h5><strong>Load Assistance</strong></h5>
 								<select class = "form-control">
 									<option>Select</option>
-									<option selected>Van Multipurpose</option>
-									<option>Construction Material</option>
-									<option>Liquid Only</option>
-									<option>Equipment</option>
-									<option>Other</option>
-								</select>
-								<h5><strong>Load Assistance</strong></h5>								
-								<select class = "form-control">
-									<option>Select</option>
-									<option>Yes</option>									
+									<option>Yes</option>
 									<option>No</option>
 								</select>
 								<hr>
@@ -113,18 +108,18 @@
     <script src="../../js/jquery.js"></script>
 	<script src="../../js/emptyride.js"></script>
 	<script src="../../js/bootstrap-datepicker.js"></script>
-	
+
     <!-- Bootstrap Core JavaScript -->
     <script src="../../js/bootstrap.min.js"></script>
-	
+
 	<script>
 		$(document).ready(function(){
 			$("#header").load("../common/header-rider.html");
 			$("#footer").load("../common/footer.html");
 		});
-		$( function() {			
-			$("#datepicker").datepicker({ 
-				autoclose: true, 
+		$( function() {
+			$("#datepicker").datepicker({
+				autoclose: true,
 				todayHighlight: true
 			}).datepicker('update', new Date());
 		} );

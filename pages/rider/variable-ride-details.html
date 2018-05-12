@@ -69,31 +69,37 @@
 								<th>&nbsp;</th>
 							</tr>
 						</thead>
+						<tfoot>
+							<tr>
+							  <td>* Provider is flexible on these attributes and each can be negotiated further subjected to approval.</td>
+							  <td>&nbsp;</td>
+							</tr>
+						</tfoot>
 						<tbody>
 							<tr>
-								<td>Fixed Cost</td>
-								<td>£ 100</td>
+								<td>Variable Cost *</td>
+								<td>£ 270</td>
 							</tr>
 							<tr>
-								<td>Fixed Date</td>
+								<td>Variable Date *</td>
 								<td>10/11/2017</td>
 							</tr>
 							<tr>
-								<td>Fixed Time</td>
-								<td>13:00</td>
+								<td>Variable Time *</td>
+								<td>10:00</td>
 							</tr>
 							<tr>
-								<td>Fixed Pick-Up Point</td>
+								<td>Variable Pick-Up Point *</td>
 								<td>Pick-Up Point</td>
 							</tr>
 							<tr>
-								<td>Fixed Drop Point</td>
+								<td>Variable Drop Point *</td>
 								<td>Drop Point</td>
 							</tr>
 							<tr>
 								<td>Good For</td>
-								<td>Furniture</td>
-							</tr>							
+								<td>Furniture,Housemove</td>
+							</tr>
 							<tr>
 								<td>Vehicle Make</td>
 								<td>MERCEDES-BENZ</td>
@@ -126,6 +132,53 @@
 						</table>
 						</div>
 					</div>
+
+					<form>
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="form-group">
+								<label for="email">Proposed Pick-Up Point</label>
+								<input type="text" name="from_address" class="form-control" id="autocomplete_from" onFocus="geolocate()" placeholder="From Location"/>
+								<p class="note">This will be the source of your journey.</p>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="form-group">
+								<label for="email">Proposed Drop Point</label>
+								<input type="text" name="to_address" class="form-control" id="autocomplete_to" onFocus="geolocate()" placeholder="To Location"/>
+								<p class="note">This will be the destination of your journey.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="form-group">
+								<label for="email">Proposed Date/Time</label>
+								<input type="text" class="form-control" id="datepicker"/>
+								<p class="note">This will be the date and time of your journey.</p>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<div class="form-group">
+								<label for="email">Proposed Ride Cost (£)</label>
+								<input class="form-control" id="orgridecost" name="orgridecost" type="text"/>
+								<p class="note">This is the proposed cost of the ride subjected to providers approval.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="form-group">
+								<label for="email">Comments</label>
+								<textarea class="form-control" rows="5" id="comment"></textarea>
+								<p class="note">Add any comments for the provider.</p>
+							</div>
+						</div>
+					</div>
+					</form>
+
 					<div class="row">
 						<div class="col-lg-12">
 							<div class="form-group">

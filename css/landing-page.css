@@ -229,6 +229,7 @@ p.copyright {
 
 .card {
   /*margin-top: 25px;*/
+  margin-bottom: 25px;
   box-sizing: border-box;
   border-radius: 2px;
   background-clip: padding-box;

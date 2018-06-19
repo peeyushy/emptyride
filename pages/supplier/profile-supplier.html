@@ -48,25 +48,33 @@
 				</div>
 			</div>
 			<div class="row">
+
 				<div class="col-lg-8">
 					<form>					
 					<div class="row">
 						<div class="col-lg-6">
 							<div class="form-group">
-								<label for="email">Email</label>
-								<input class="form-control" id="user_login" name="user[login]" type="text" placeholder="email@something.com"/>
-								<p class="note">Registered email id.</p>
+								<label for="email">User Name</label>
+								<input class="form-control" id="user_login" name="user[login]" type="text"/>
+								<p class="note">User name.</p>
 							</div>
 						</div>
 						<div class="col-lg-6">
 							<div class="form-group">
-								<label for="email">User Name</label>
-								<input class="form-control" id="user_login" name="user[login]" type="text"/>
-								<p class="note">User name to login.</p>
+								<label for="email">Email</label>
+								<input class="form-control" id="user_login" name="email" type="text" placeholder="email@something.com"/>
+								<p class="note">User registered email.</p>
 							</div>
-						</div>
+						</div>						
 					</div>
-					<div class="row">
+					<div class="row">				
+						<div class="col-lg-6">
+							<div class="form-group">
+								<label for="email">Mobile Number</label>
+								<input class="form-control" id="user_login" name="email" type="text" placeholder="07676767676"/>
+								<p class="note">User registered mobile number.</p>
+							</div>
+						</div>						
 						<div class="col-lg-6">
 							<div class="form-group">
 								<label for="email">Notification Method</label>
@@ -79,8 +87,10 @@
 								</select>
 								<p class="note">Selected method will be used to send you notifications.</p>
 							</div>
-						</div>
-						<div class="col-lg-6">
+						</div>						
+					</div>
+					<div class="row">
+						<div class="col-lg-12">
 							<div class="form-group">
 								<label for="email">Select Avatar</label>
 								<input type="file" />
@@ -108,14 +118,12 @@
 								<hr>
 								<h5><strong>Name</strong></h5>
 								<p>Peeyush Yadav</p>								
+								<hr>								
+								<h5><strong>Email</strong></h5>
+								<p>email@something.com</p>
 								<hr>
-								<h5><strong>Mobile Number</strong><div class="pull-right btn-group btn-group-xs">
-									<button type="button" class="btn btn-success" data-toggle="tooltip" trigger="hover" data-placement="left" title = "Click to update registered mobile no.">EDIT</button>
-								</div></h5>
+								<h5><strong>Mobile Number</strong></h5>
 								<p>0123456789</p>
-								<hr>
-								<h5><strong>Birthday</strong></h5>
-								<p>January 01 1900</p>
 							</div>
 						</div>
 					</div>
@@ -138,7 +146,7 @@
 	<script>
 		$(document).ready(function(){
 			//alert("peeyush:"+$(document).path);
-			$("#header").load("../common/header-transporter.html");
+			$("#header").load("../common/header-supplier.html");
 			$("#footer").load("../common/footer.html");
 		});
 

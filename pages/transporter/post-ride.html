@@ -43,9 +43,9 @@
         <div class="container">
             <div class="row">
 				<div class="col-lg-12">
-                    <h2 class="section-heading">Post Empty-Ride</h2>
+                    <h2 class="section-heading">Post Vehicle Ride</h2>
 					<hr class="section-heading-spacer">
-                    <div class="clearfix"></div>                    
+                    <div class="clearfix"></div>
 				</div>
 			</div>
 			<div class="row">
@@ -54,7 +54,7 @@
 						<div class="row">
 							<div class="col-lg-6">
 								<div class="form-group">
-									<label for="email">Pick-Up Point</label>									
+									<label for="email">Pick-Up Point</label>
 									<input type="text" name="from_address" class="form-control" id="autocomplete_from" onFocus="geolocate()" placeholder="From Location"/>
 									<p class="note">This will be the source of your journey.</p>
 								</div>
@@ -74,7 +74,7 @@
 									<label for="flexipdadd">&nbsp;&nbsp;Flexible with the above Pick-up/Drop Point?</label>
 									<p class="note">Flexible Pick-up/Drop point post are likely to hit more searches.</p>
 								</div>
-							</div>							
+							</div>
 							<div class="col-lg-6">
 								<div class="form-group">
 									<label for="email">Select Vehicle</label>
@@ -85,7 +85,7 @@
 									</select>
 									<p class="note">This is your registered vehicle with us.</p>
 								</div>
-							</div>							
+							</div>
 						</div>
 						<div class="row">
 							<div class="col-lg-6">
@@ -105,9 +105,9 @@
 									</select>
 									<p class="note">Load assistance means you are agreeing to help in loading and unloading.</p>
 								</div>
-							</div>							
+							</div>
 						</div>
-						<div class="row">							
+						<div class="row">
 							<div class="col-lg-12">
 								<div class="form-group">
 									<input id="flexidays" type="checkbox"/>
@@ -145,11 +145,20 @@
 						<div class="row">
 							<div class="col-lg-12">
 								<div class="form-group">
-									<label for="email">Comments</label>						
+									<label for="email">Comments</label>
 									<textarea class="form-control" rows="5" id="comment"></textarea>
 								</div>
 								<p class="note">Please add any additional comments that defines your vehicle this will help us in getting you the best load.</p>
-							</div>							
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-12">
+								<div class="form-group">
+									<input id="flexidays" type="checkbox" checked />
+									<label for="flexidays">&nbsp;&nbsp;Active</label>
+									<p class="note">Uncheck to disable ride.</p>
+								</div>
+							</div>
 						</div>
 					</form>
                 </div>
@@ -161,7 +170,7 @@
 						</div>
 					</div>
 				</div>
-			</div>		
+			</div>
 			<div class="row">
 				<div class="col-lg-8">
 					<div class="group">
@@ -197,10 +206,10 @@
 			//alert(value);
 			$("#emptyridecost").val(value-(value*10/100));
 		});
-		
-		$( function() {			
-			$("#datepicker").datepicker({ 
-				autoclose: true, 
+
+		$( function() {
+			$("#datepicker").datepicker({
+				autoclose: true,
 				todayHighlight: true
 			}).datepicker('update', new Date());
 		} );
